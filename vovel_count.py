@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 """
 Return the number (count) of vowels in the given string.
 
@@ -8,10 +9,11 @@ The input string will only consist of lower case letters and/or spaces.
 """
 
 
-def getCount(inputStr):
+def get_count(input_str):
     num_vowels = 0
     for e in 'aeiou':
-        num_vowels += inputStr.count(e)
+        num_vowels += input_str.count(e)
     return num_vowels
 
-TestCase().assertEqual(getCount("abracadabra"), 5)
+
+TestCase().assertEqual(get_count("abracadabra"), 5)

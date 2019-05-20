@@ -26,8 +26,10 @@ from unittest import TestCase
     anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 '''
 
+
 def anagrams(base, words_list):
     return [word for word in words_list if sorted(word) == sorted(base)]
+
 
 TestCase().assertEqual(anagrams('asd', ['sad', 'dsab', 'asd']), ['sad', 'asd'])
 TestCase().assertEqual(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']), ['carer', 'racer'])

@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 """
 The rgb() method is incomplete. Complete the method so that passing in RGB decimal values
 will result in a hexadecimal representation being returned. The valid decimal values
@@ -18,8 +19,9 @@ def rgb(r, g, b):
     round = lambda x: min(255, max(x, 0))
     return ("{:02X}" * 3).format(round(r), round(g), round(b))
 
-TestCase().assertEqual(rgb(0,0,0),"000000", "testing zero values")
-TestCase().assertEqual(rgb(1,2,3),"010203", "testing near zero values")
-TestCase().assertEqual(rgb(255,255,255), "FFFFFF", "testing max values")
-TestCase().assertEqual(rgb(254,253,252), "FEFDFC", "testing near max values")
-TestCase().assertEqual(rgb(-20,275,125), "00FF7D", "testing out of range values")
+
+TestCase().assertEqual(rgb(0, 0, 0), "000000", "testing zero values")
+TestCase().assertEqual(rgb(1, 2, 3), "010203", "testing near zero values")
+TestCase().assertEqual(rgb(255, 255, 255), "FFFFFF", "testing max values")
+TestCase().assertEqual(rgb(254, 253, 252), "FEFDFC", "testing near max values")
+TestCase().assertEqual(rgb(-20, 275, 125), "00FF7D", "testing out of range values")

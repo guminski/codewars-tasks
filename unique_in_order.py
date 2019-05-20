@@ -11,7 +11,9 @@ from unittest import TestCase
     unique_in_order([1,2,2,3,3])       == [1,2,3]
 '''
 
+
 def unique_in_order(iterable):
     return [elem for index, elem in enumerate(iterable) if index == 0 or iterable[index - 1] != elem]
 
-TestCase().assertEqual(unique_in_order('AAAABBBCCDAABBB'), ['A','B','C','D','A','B'])
+
+TestCase().assertEqual(unique_in_order('AAAABBBCCDAABBB'), ['A', 'B', 'C', 'D', 'A', 'B'])

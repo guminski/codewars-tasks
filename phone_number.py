@@ -11,9 +11,11 @@ from unittest import TestCase
     Don't forget the space after the closing parentheses!
 '''
 
+
 def create_phone_number(n):
     nums = ''.join(str(num) for num in n)
     return f'({nums[:3]}) {nums[3:6]}-{nums[6:]}'
+
 
 TestCase().assertEqual(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]), '(123) 456-7890')
 TestCase().assertEqual(create_phone_number([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]), '(111) 111-1111')

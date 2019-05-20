@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 """
 Compare two strings by comparing the sum of their values (ASCII character code).
 
@@ -18,9 +19,11 @@ Examples:
 null, ""    -> equal
 """
 
-def compare(s1,s2):
-    a, b = (sum(ord(x) for x in s.upper()) if s and s.isalpha() else '' for s in (s1,s2))
+
+def compare(s1, s2):
+    a, b = (sum(ord(x) for x in s.upper()) if s and s.isalpha() else '' for s in (s1, s2))
     return a == b
+
 
 TestCase().assertEqual(compare("AD", "BC"), True, "\'AD\' vs \'BC\'")
 TestCase().assertEqual(compare("AD", "DD"), False, "\'AD\' vs \'DD\'")
